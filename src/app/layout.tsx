@@ -1,3 +1,4 @@
+import Providers from "./Providers";
 import "./globals.css";
 import localFont from "next/font/local";
 
@@ -18,12 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body
         suppressHydrationWarning={true}
         className={`${pretendard.variable}`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
